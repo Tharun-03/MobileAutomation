@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Search Value enterted<br>]]>
+    </line>
+    <line>
+      <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042513254.png' height='200']<br>]]>
+    </line>
+    <line>
+      <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042526967.png' height='200']<br>]]>
+    </line>
+    <line>
+      <![CDATA[Searched Item found and clicked<br>]]>
+    </line>
+    <line>
+      <![CDATA[Expected Item is selected and displayed on screen<br>]]>
+    </line>
+    <line>
+      <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042622586.png' height='200']<br>]]>
+    </line>
+    <line>
+      <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042657076.png' height='200']<br>]]>
+    </line>
+    <line>
+      <![CDATA[Buy Now Button is clicked<br>]]>
+    </line>
+    <line>
+      <![CDATA[Delivery Address Page launched<br>]]>
+    </line>
+    <line>
+      <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042709285.png' height='200']<br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="152945" started-at="2019-08-16T06:24:38Z" finished-at="2019-08-16T06:27:11Z">
+    <groups>
+    </groups>
+    <test name="Amazon_Test" duration-ms="152945" started-at="2019-08-16T06:24:38Z" finished-at="2019-08-16T06:27:11Z">
+      <class name="com.amazon.tests.PurchaseItemTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.amazon.tests.PurchaseItemTest@4ba2ca36]" name="beforeSuite" is-config="true" duration-ms="11" started-at="2019-08-16T16:24:38Z" finished-at="2019-08-16T16:24:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="initialization(org.testng.ITestContext)[pri:0, instance:com.amazon.tests.PurchaseItemTest@4ba2ca36]" name="initialization" is-config="true" duration-ms="24680" started-at="2019-08-16T16:24:38Z" finished-at="2019-08-16T16:25:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4b4dd216]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="searchItem()[pri:0, instance:com.amazon.tests.PurchaseItemTest@4ba2ca36]" name="searchItem" duration-ms="71793" started-at="2019-08-16T16:25:03Z" finished-at="2019-08-16T16:26:15Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Search Value enterted<br>]]>
+            </line>
+            <line>
+              <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042513254.png' height='200']<br>]]>
+            </line>
+            <line>
+              <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042526967.png' height='200']<br>]]>
+            </line>
+            <line>
+              <![CDATA[Searched Item found and clicked<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method status="PASS" signature="purchaseSearchedItem()[pri:0, instance:com.amazon.tests.PurchaseItemTest@4ba2ca36]" name="purchaseSearchedItem" duration-ms="55107" started-at="2019-08-16T16:26:15Z" finished-at="2019-08-16T16:27:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Expected Item is selected and displayed on screen<br>]]>
+            </line>
+            <line>
+              <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042622586.png' height='200']<br>]]>
+            </line>
+            <line>
+              <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042657076.png' height='200']<br>]]>
+            </line>
+            <line>
+              <![CDATA[Buy Now Button is clicked<br>]]>
+            </line>
+            <line>
+              <![CDATA[Delivery Address Page launched<br>]]>
+            </line>
+            <line>
+              <![CDATA[[img src='D:\mobile-test-amazon\screenshots\screen_20190816_042709285.png' height='200']<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- purchaseSearchedItem -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.amazon.tests.PurchaseItemTest@4ba2ca36]" name="cleanup" is-config="true" duration-ms="1353" started-at="2019-08-16T16:27:10Z" finished-at="2019-08-16T16:27:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.amazon.tests.PurchaseItemTest@4ba2ca36]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-08-16T16:27:11Z" finished-at="2019-08-16T16:27:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.amazon.tests.PurchaseItemTest -->
+    </test> <!-- Amazon_Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Amazon_Test(failed)" preserve-order="true">
+    <classes>
+      <class name="com.amazon.tests.PurchaseItemTest">
+        <methods>
+          <include name="cleanup"/>
+          <include name="beforeSuite"/>
+          <include name="purchaseSearchedItem"/>
+          <include name="afterSuite"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.amazon.tests.PurchaseItemTest -->
+    </classes>
+  </test> <!-- Amazon_Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
