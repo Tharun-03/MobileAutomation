@@ -1,0 +1,26 @@
+{
+  "No_Filter_Selected": {
+    "locatorType": "css",
+    "locatorValue": "#s-refinements div#s-refinements-a11y-summary"
+  },
+  "Delivery_Day_Text": {
+    "locatorType": "css",
+    "locatorValue": "div#deliveryRefinements div span.a-size-base.a-color-base.puis-bold-weight-text"
+  },
+  "Delivery_Day_Options": {
+    "locatorType": "css",
+    "locatorValue": "div#deliveryRefinements ul span span li span a span.a-size-base.a-color-base"
+  },
+  "Delivery_Day_Check_box": {
+    "locatorType": "css",
+    "locatorValue": "div#deliveryRefinements ul span span li span div label input[type = 'checkbox']"
+  },
+  "Clear_Filter": {
+    "locatorType": "css",
+    "locatorValue": "div#deliveryRefinements div[aria-labelledby] a"
+  },
+  "Recently_Used_Filters": {
+    "locatorType": "css",
+    "locatorValue": "div.a-section.a-spacing-double-large div[id = 'topRefinements/0'] ul span span li span a span.a-size-base.a-color-base"
+  }
+}
