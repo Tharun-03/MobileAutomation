@@ -19,3 +19,4 @@ public class GlobalActions implements Launch {
        this.launch.launchBrowser();
     }
 }
+
