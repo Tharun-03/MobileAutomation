@@ -1,16 +1,16 @@
-name: Cucumber Test Execution
+name: Run Selenium Tests and Publish Reports
 
 on:
   push:
     branches: [ "selenium" ]
-  workflow_dispatch:  # Enables manual trigger
+  workflow_dispatch:  # Allows manually triggering the workflow from GitHub Actions UI
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout Repository
       uses: actions/checkout@v4
 
     - name: Set up JDK 17
@@ -20,40 +20,25 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
+    - name: Install Dependencies
+      run: mvn clean install -DskipTests
+
     - name: Run Tests with Maven
-      run: mvn clean test
+      run: mvn test
 
-    - name: Store Cucumber Reports
-      run: |
-        mkdir -p cucumber-reports
-        cp -r target/cucumber-reports/*.html cucumber-reports/
-    
-    - name: Upload Cucumber Reports as an Artifact
-      uses: actions/upload-artifact@v4
+    - name: Generate Cucumber Reports
+      run: mvn verify
+
+    - name: Upload Cucumber Reports
+      uses: actions/upload-artifact@v3
       with:
         name: cucumber-reports
-        path: cucumber-reports/
+        path: target/cucumber-reports/
 
-  deploy-report:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
-
-    - name: Download Test Reports
-      uses: actions/download-artifact@v4
+    - name: Deploy Cucumber Reports to GitHub Pages
+      if: success()
+      uses: peaceiris/actions-gh-pages@v4
       with:
-        name: cucumber-reports
-        path: cucumber-reports
-
-    - name: Deploy Reports to GitHub Pages
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git fetch origin gh-pages || git checkout --orphan gh-pages
-        git checkout gh-pages
-        cp -r cucumber-reports/* .
-        git add .
-        git commit -m "📊 Update Cucumber Report"
-        git push origin gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./target/cucumber-reports/
+        publish_branch: gh-pages  # Creates gh-pages branch if it doesn't exist
